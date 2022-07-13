@@ -1,0 +1,10 @@
+String fileName =(String)wfc.getWFContent("fileName");   
+String fileExtension = null;
+String extension[] = fileName.split("\\.");
+int i = extension.length;
+
+if(i > 1){
+ fileExtension = extension[i-1];
+}
+wfc.addWFContent("EXTENSION",fileExtension);
+return "000";
